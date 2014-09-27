@@ -22,6 +22,10 @@
 	<div class="page">
 
 		<h1>Assignments</h1>
+	</div>
+
+	<div class="page">
+
 		<p> <span>Comming Soon! </span></p>
 	</div>
 
