@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hello World</title>
+  <title>Chad E.</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 
 
@@ -14,7 +14,7 @@
 	<div class="titleBar">
 		<ul>
 			<li>Chad Eddington</li>
-			<li><a href="/rhcloud/index.php">Home</a></li>
+			<li><a href="~/index.php">Home</a></li>
 			<li><a href="assignments/index.php">Assignments</a></li>
 		</ul>
 	</div>
