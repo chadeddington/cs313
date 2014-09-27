@@ -14,7 +14,7 @@
 	<div class="titleBar">
 		<ul>
 			<li>Chad Eddington</li>
-			<li><a href="/rhcloud/index.php">Home</a></li>
+			<li><a href="../index.php">Home</a></li>
 			<li><a href="assignments/index.php">Assignments</a></li>
 		</ul>
 	</div>
