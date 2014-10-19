@@ -9,7 +9,7 @@ $dbUser = 'guest';
 $password = 'cangetin';
 
 try {
-  $mydb = new PDO("mysql:host=$dbHost:$dbPort", $dbUser, $password);
+  $mydb = new PDO("mysql:host=$dbHost:$dbPort", 'adminQ7UQbmK', 'hWmFxHJjIqAv';
 } catch (PDOException $e) {
   $error_message = $e->getMessage();
   echo "An error occured while trying to connect to the database. $error_message";
