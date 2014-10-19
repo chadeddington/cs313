@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Hello World</title>
+  <title>Chad E.</title>
   <link rel="stylesheet" type="text/css" href="../style.css">
 
 
 </head>
 <body>
-
+	<?php require('../model/db_functions.php'); ?>
 
 	<div class="titleBar">
 		<ul>
@@ -21,12 +21,32 @@
 
 	<div class="page">
 
-		<h1>Assignments</h1>
+		<h1>Example</h1>
+		
+            
 	</div>
 
 	<div class="page">
-		<a href="survey.php"><span>Favorites Survey</span></a><br>
-		<a href="sample_card.php"><span>Example</span></a>
+
+		<h2>Spending Data</h2>
+		<br>
+
+		<table style="width:100%">
+			<tr>
+		  	<th>Amount Spent</th>
+		  	<th>Description</th>
+		  	<th>Category</th>
+		  	<th>Date Purchased</th>
+		  	</tr>
+		  <tr>
+		   <?php 
+			display_spending();
+			?>
+		  </tr>
+
+		</table>
+		
+		
 
 	</div>
 
