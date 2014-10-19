@@ -2,8 +2,8 @@
 /* ***************************************
  * Get access to the database connection
  * **************************************/
-$dbHost = 'getenv('OPENSHIFT_MYSQL_DB_HOST')';
-$dbPort = 'getenv('OPENSHIFT_MYSQL_DB_PORT')';
+$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
 //$dsn = 'mysql:host=localhost;dbname=moneydb';
 $dbUser = 'guest';
 $password = 'cangetin';
