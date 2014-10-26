@@ -11,7 +11,7 @@
 <body>
 	<?php require('../model/db_functions.php'); ?>
 
-	<?php include "navBar.php" ?>
+	<?php include "nav/navBar.php" ?>
 
 	<div class="page">
 
