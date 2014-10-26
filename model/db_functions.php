@@ -4,13 +4,13 @@
  * **************************************/
 $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
 $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-$dsn = 'mysql:host=localhost;dbname=moneydb';
+//$dsn = 'mysql:host=localhost;dbname=moneydb';
 $dbUser = 'guest';
 $password = 'cangetin';
 
 try {
-  //$mydb = new PDO("mysql:host=$dbHost:$dbPort;dbname=moneydb", $dbUser, $password);
-  $mydb = new PDO("$dsn", $dbUser, $password);
+  $mydb = new PDO("mysql:host=$dbHost:$dbPort;dbname=moneydb", $dbUser, $password);
+  //$mydb = new PDO("$dsn", $dbUser, $password);
 } catch (PDOException $e) {
   $error_message = $e->getMessage();
   echo "An error occured while trying to connect to the database. $error_message";
