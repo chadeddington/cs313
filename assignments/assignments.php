@@ -21,7 +21,7 @@
 
 	<div class="page">
 		<a href="assignments/survey.php"><span>Favorites Survey</span></a><br>
-		<a href="sample_card.php"><span>Example</span></a>
+		<a href="assignments/sample_card.php"><span>Example</span></a>
 
 	</div>
 
