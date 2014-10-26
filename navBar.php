@@ -1,8 +1,8 @@
 <div class="navBar">
 		<ul>
 			<li>Chad Eddington</li>
-			<li><a href="?action=home">Home</a></li>
-			<li><a href="?action=assignments">Assignments</a></li>
+			<li><a href="./?action=home">Home</a></li>
+			<li><a href="./?action=assignments">Assignments</a></li>
 
 			<?php if ($_SESSION['mylogin'] == 1) {
         		echo '<li><a href="">My Cards</a></li>

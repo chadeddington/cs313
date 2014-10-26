@@ -4,7 +4,7 @@
  * **************************************/
 $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
 $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-//$dsn = 'mysql:host=localhost;dbname=moneydb';
+$dsn = 'mysql:host=localhost;dbname=moneydb';
 $dbUser = 'guest';
 $password = 'cangetin';
 
