@@ -11,13 +11,7 @@
 <body>
 	<?php require('../model/db_functions.php'); ?>
 
-	<div class="titleBar">
-		<ul>
-			<li>Chad Eddington</li>
-			<li><a href="../?action=home">Home</a></li>
-			<li><a href="assignments.php">Assignments</a></li>
-		</ul>
-	</div>
+	<?php include "navBar.php" ?>
 
 	<div class="page">
 

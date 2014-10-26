@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,15 +11,7 @@
 </head>
 <body>
 
-
-	<div class="titleBar">
-		<ul>
-			<li>Chad Eddington</li>
-			<li><a href="?action=home">Home</a></li>
-			<li><a href="assignments/assignments.php">Assignments</a></li>
-		</ul>
-	</div>
-
+	<?php include "navBar.php" ?>
 	<div class="page">
 
 		<h1>About Me</h1>

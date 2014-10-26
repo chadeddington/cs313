@@ -20,13 +20,7 @@ if ($_SESSION["voted"] == 1)
 } else
     $_SESSION["voted"] = 0;
 ?>
-	<div class="titleBar">
-		<ul>
-			<li>Chad Eddington</li>
-			<li><a href="../?action=home">Home</a></li>
-			<li><a href="../?action=assignments">Assignments</a></li>
-		</ul>
-	</div>
+	<?php include "nav/navBar.php" ?>
 
 	<div class="page">
 

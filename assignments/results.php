@@ -17,13 +17,7 @@
 			$_SESSION["voted"] = 1;
     ?>
 
-	<div class="titleBar">
-		<ul>
-			<li>Chad Eddington</li>
-			<li><a href="../?action=home">Home</a></li>
-			<li><a href="assignments.php">Assignments</a></li>
-		</ul>
-	</div>
+	<?php include "navBar.php" ?>
 
 	<div class="page">
 
