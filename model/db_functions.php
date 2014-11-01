@@ -98,7 +98,7 @@ function display_spending($userId){
             $count = count($results);
             foreach($results as $result)
             {
-              echo "<form action='delete.php' method='get'><input type='hidden' name='spendingId' value='".$result["spending_id"]."'><td>$".$result["amountSpent"]."</td>"."<td>".$result["description"]."</td>"."<td>".$result["category"]."</td>"."<td>".$result["dateSpent"]."</td><td><input type='submit' class='dbButton' value='Delete'></td></form></tr>";
+              echo "<form action='delete.php' method='get'><input type='hidden' name='spendingId' value='".$result["spending_id"]."'><td>$".$result["amountSpent"]."</td>"."<td>".$result["description"]."</td>"."<td>".$result["category"]."</td>"."<td>".$result["dateSpent"]."</td><td style='border-right:none;'><input type='submit' class='dbButton' value='Delete'></td></form></tr>";
                 
             }
           }
