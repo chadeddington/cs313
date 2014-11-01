@@ -25,7 +25,6 @@ function insert()
     $amount = $_GET['amount'];
     $dateSpent = $_GET['dateSpent'];
     $userName = $_SESSION['user'];
-    $date = getDate();
 
     if ( $_GET['amount'] == '' || $_GET['category'] == '')
     {
@@ -38,7 +37,7 @@ function insert()
         $sql = "INSERT INTO Spending
                (user_id, description, category, amountSpent, dateSpent, dateUpdated, updatedBy)
                VALUES
-               ('$userId','$description','$category','$amount','$dateSpent', '$date', '$userName')";
+               ('$userId','$description','$category','$amount','$dateSpent', CURDATE(), '$userName')";
                
         $statement = $mydb->prepare($sql);
         $success = $statement->execute();
@@ -59,11 +58,32 @@ function insert()
     }
   }
 
+function delete()
+{
+  global $mydb;
+    $spendingId = $_GET['spendingId'];
+
+    try { 
+      
+      $sql = "DELETE FROM Spending
+              WHERE spending_id='$spendingId'";
+             
+      $statement = $mydb->prepare($sql);
+      $success = $statement->execute();
+        
+    } catch (Exception $PDOException) { 
+      $error_message = $PDOException->getMessage();
+      echo $error_message;       
+    }
+
+    header("Location:my_cards.php");
+}
+
 function display_spending($userId){
   global $mydb; 
 
   try {        
-        $sql = "SELECT amountSpent,description,category,dateSpent
+        $sql = "SELECT spending_id,amountSpent,description,category,dateSpent
                 FROM Spending
                 WHERE user_id = $userId";
       
@@ -72,13 +92,13 @@ function display_spending($userId){
         $results = $statement->fetchAll();
     
         if (empty($results)) {
-            echo "Oops, Try again!";
+            echo "No Data Found";
         } else 
           {
             $count = count($results);
             foreach($results as $result)
             {
-              echo "<td>$".$result["amountSpent"]."</td>"."<td>".$result["description"]."</td>"."<td>".$result["category"]."</td>"."<td>".$result["dateSpent"]."</td>";
+              echo "<form action='delete.php' method='get'><input type='hidden' name='spendingId' value='".$result["spending_id"]."'><td>$".$result["amountSpent"]."</td>"."<td>".$result["description"]."</td>"."<td>".$result["category"]."</td>"."<td>".$result["dateSpent"]."</td><td><input type='submit' class='dbButton' value='Delete'></td></form></tr>";
                 
             }
           }

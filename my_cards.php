@@ -48,7 +48,7 @@
 		   		<input type="text" name="dateSpent">
 		   	</td>
 		   	<td style="border-right:none;">
-		   		<input id="insert" type="submit" name="action" value="Insert">
+		   		<input class="dbButton" type='submit' name="action" value="Insert">
 		   	</td>
 		  </tr>
 
@@ -69,6 +69,7 @@
 		  	<th>Description</th>
 		  	<th>Category</th>
 		  	<th>Date Purchased</th>
+		  	<th>Remove</th>
 		  	</tr>
 		  <tr>
 		   <?php 
