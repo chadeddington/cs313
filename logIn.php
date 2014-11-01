@@ -19,17 +19,41 @@
 
 	<div class="page">
 		<div id="loginForm">
-            <form action="checkLogin.php" name="myForm" onsubmit="return validate()" method="post">
+            <form action="checkLogin.php" name="myForm"  method="post">
                 <label>User Name: </label>
                 <input type="text" name="user_name">
                 <br>
-                <label>Password: &nbsp;  </label>
+                <label class="password">Password: &nbsp;  </label>
                 <input type="password" name="password">
                 <br>
                 <input id="button" type="submit" name="action" value="Submit">
             </form>
         </div>
 	</div>
+
+  <div class="page">
+    <div id="RegisterForm">
+      <h2> Not a member? Register Here</h2>
+            <form action="checkRegister.php" name="myForm" method="post">
+                <labe class="name">First name: </labe>
+                <input type="text" name="first_name">
+                <br>
+                <labe class="name">Last name: </labe>
+                <input type="text" name="last_name">
+                <br>
+                <label id="email">Email: </label>
+                <input type="text" name="email">
+                <br>
+                <label>User Name:</label>
+                <input type="text" name="user_name">
+                <br>
+                <label class="password">Password: &nbsp;  </label>
+                <input type="password" name="password">
+                <br>
+                <input id="button" type="submit" name="action" value="Submit">
+            </form>
+        </div>
+  </div>
 
 </body>
 </html>

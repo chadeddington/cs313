@@ -82,4 +82,40 @@ function logIn() {
 
 }
 
+function register(){
+  global $mydb;
+  $userName = trim($_POST['user_name']);
+  $password = $_POST['password'];
+  $firstName = $_POST['first_name'];
+  $lastName = $_POST['last_name'];
+  $email = $_POST['email'];
+
+  if (!$userName == '' || !$password == ''){
+      try { 
+        
+        $sql = "INSERT INTO User
+               (userName, firstName, lastName, email, password)
+               VALUES
+               ('$userName','$firstName','$lastName','$email','$password')";
+               
+        $statement = $mydb->prepare($sql);
+        $success = $statement->execute();
+          
+    } catch (Exception $PDOException) { 
+        $error_message = $PDOException->getMessage();
+        echo $error_message;       
+    } 
+    
+    if ($success) {
+        $count = $statement->rowCount();
+        header("Location:register_success.php");
+
+    } else
+      {
+        echo "There was an error, $firstName";   
+      
+      } 
+  } 
+} 
+
 ?>
