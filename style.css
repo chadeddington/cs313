@@ -9,7 +9,7 @@ COLOR PALETTE "Two blue"
 	padding:0;
 }
 html, body {
-    min-width: 750px;
+    min-width: 800px;
     margin:0;
     padding:0;
     background-color: #2e4174;
@@ -40,6 +40,32 @@ input {
 }
 
 #button:hover {
+	border:2px solid blue;
+
+}
+
+#insert {
+	width: 100px;
+	height: 40px;
+	font-size: 24px;
+	background-color: white;
+	box-shadow: 2px 2px  2px  black;
+	text-align: center;
+	
+}
+
+input {
+	border-radius: 10px;
+	width: 80px;
+	height: 20px;
+	font-size: 16px;
+	text-align: right;
+	border-radius: 10px;
+	box-shadow: 2px 2px  2px  black;
+
+}
+
+#insert:hover {
 	border:2px solid blue;
 
 }
@@ -106,16 +132,18 @@ span {
 	font-size: 1.5em;
 }
 
-table, th, td {
-    border: 1px solid black;
+
+th {
+    border-bottom: 1px solid black;
   
 }
 th, td {
     padding: 5px;
+    border-right: 1px solid black;
 }
 
 td {
-	text-align: right;
+	text-align: center;
 }
 
 h2 {

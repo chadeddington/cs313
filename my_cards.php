@@ -1,5 +1,6 @@
 <?php session_start() ?>
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,9 +12,10 @@
 
 </head>
 <body>
-	<?php require('model/db_functions.php'); ?>
-
-	<?php include "navBar.php" ?>
+	
+	<?php include "navBar.php" ;
+		require_once ( 'model/db_functions.php' );
+	?>
 
 	<div class="page">
 
@@ -21,6 +23,40 @@
 		
             
 	</div>
+
+	<div class="page">
+	<form action="insert.php" method="get">
+		<table style="width:100%">
+			<tr>
+		  	<th>Amount Spent</th>
+		  	<th>Description</th>
+		  	<th>Category</th>
+		  	<th>Date Purchased</th>
+		  	<th>Update Table</th>
+		  	</tr>
+		  <tr>
+		  	<td>
+		   		$<input type="text" name="amount">
+		   	</td>
+		   	<td>
+		   		<input type="text" name="description">
+		   	</td>
+		   	<td>
+		   		<input type="text" name="category">
+		   	</td>
+		   	<td>
+		   		<input type="text" name="dateSpent">
+		   	</td>
+		   	<td style="border-right:none;">
+		   		<input id="insert" type="submit" name="action" value="Insert">
+		   	</td>
+		  </tr>
+
+		</table>
+
+		</form>        
+	</div>
+
 
 	<div class="page">
 
@@ -45,3 +81,4 @@
 		
 
 	</div>
+</body>

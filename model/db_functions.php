@@ -16,6 +16,49 @@ try {
   echo "An error occured while trying to connect to the database. $error_message";
 }
 
+function insert()
+  {
+    global $mydb;
+    $userId = $_SESSION['userId'];
+    $description = $_GET['description'];
+    $category = $_GET['category'];
+    $amount = $_GET['amount'];
+    $dateSpent = $_GET['dateSpent'];
+    $userName = $_SESSION['user'];
+    $date = getDate();
+
+    if ( $_GET['amount'] == '' || $_GET['category'] == '')
+    {
+      echo 'There was an error. You forgot to enter some data.';
+    } 
+    else
+    {
+      try { 
+        
+        $sql = "INSERT INTO Spending
+               (user_id, description, category, amountSpent, dateSpent, dateUpdated, updatedBy)
+               VALUES
+               ('$userId','$description','$category','$amount','$dateSpent', '$date', '$userName')";
+               
+        $statement = $mydb->prepare($sql);
+        $success = $statement->execute();
+          
+      } catch (Exception $PDOException) { 
+        $error_message = $PDOException->getMessage();
+        echo $error_message;       
+      }
+
+      if ($success) {
+        $count = $statement->rowCount();
+        header("Location:my_cards.php");
+
+    } else
+      {
+        echo "There was an error,".$_SESSION['user'];   
+      } 
+    }
+  }
+
 function display_spending($userId){
   global $mydb; 
 
