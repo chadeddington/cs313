@@ -9,18 +9,20 @@ $dbUser = 'guest';
 $password = 'cangetin';
 
 try {
-  $mydb = new PDO("mysql:host=$dbHost:$dbPort;dbname=moneydb", $dbUser, $password);
-  //$mydb = new PDO("$dsn", $dbUser, $password);
+  //$mydb = new PDO("mysql:host=$dbHost:$dbPort;dbname=moneydb", $dbUser, $password);
+  $mydb = new PDO("$dsn", $dbUser, $password);
 } catch (PDOException $e) {
   $error_message = $e->getMessage();
   echo "An error occured while trying to connect to the database. $error_message";
 }
 
-function display_spending(){
+function display_spending($userId){
   global $mydb; 
 
   try {        
-        $sql = "SELECT amountSpent,description,category,dateSpent FROM Spending";
+        $sql = "SELECT amountSpent,description,category,dateSpent
+                FROM Spending
+                WHERE user_id = $userId";
       
         $statement = $mydb->prepare($sql);
         $statement->execute(); 
@@ -51,7 +53,7 @@ function logIn() {
   $password = $_POST['password'];
     
     try {        
-        $sql = "SELECT userName, password FROM User
+        $sql = "SELECT user_id, userName, password FROM User
                 WHERE userName = '$userName'
                 AND   password = '$password'";
       
@@ -66,7 +68,10 @@ function logIn() {
             //echo "<h2>Welcome $userName.</h2> You have successfully logged in." ;
             $_SESSION['mylogin'] = 1;
             $_SESSION['user'] = $userName;
+            $_SESSION['userId'] = $result["user_id"];
             header("Location:log_in_success.php");
+
+
         } else
             echo "<h2>Oops! </h2>There was an error logging in.";      
           
@@ -74,6 +79,7 @@ function logIn() {
         $error_message = $PDOException->getMessage();
         echo $error_message;      
     } 
+
 }
 
 ?>

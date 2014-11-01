@@ -5,7 +5,7 @@
 			<li><a href="./?action=assignments">Assignments</a></li>
 
 			<?php if ($_SESSION['mylogin'] == 1) {
-        		echo '<li><a href="">My Cards</a></li>
+        		echo '<li><a href="my_cards.php">My Cards</a></li>
         			  <li><a href="log_out.php">Log out</a></li>
         			  <p id="userId">Logged in as '.$_SESSION['user'].'</p>';
     
