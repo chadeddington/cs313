@@ -30,14 +30,26 @@ input {
 .password {
 	margin-right: 2px;
 }
+input {
+	width: 80px;
+	height: 20px;
+	font-size: 16px;
+	text-align: right;
+	border-radius: 10px;
+	box-shadow: 2px 2px  2px  black;
 
-#button {
-	border: 1px solid black;
-	background-color: white;
-	width:50px;
-	height:20px;
-	font-weight: bold;
 }
+
+.login {
+
+	width: 100px;
+	height: 20px;
+	font-size: 16px;
+	text-align: right;
+	border-radius: 0px;
+	box-shadow: 1px 1px black;
+}
+
 
 #button:hover {
 	border:2px solid blue;
@@ -54,16 +66,18 @@ input {
 	
 }
 
-input {
-	border-radius: 10px;
-	width: 80px;
-	height: 20px;
-	font-size: 16px;
-	text-align: right;
-	border-radius: 10px;
+.fButton {
+	width: 100px;
+	height: 30px;
+	font-size: 18px;
+	background-color: white;
 	box-shadow: 2px 2px  2px  black;
-
+	text-align: center;
+	margin-left: 110px;
+	
 }
+
+
 
 #insert:hover {
 	border:2px solid blue;
